@@ -7,7 +7,7 @@ import gleam/int
 import gleam/io
 
 fn bar(monitor: Int) -> Window {
-  let time = var.new(var.Poll("", 1000, var.Shell("date")))
+  let time = var.poll("", 1000, var.Shell("date"))
 
   window.new(
     io.debug(window.Config(
